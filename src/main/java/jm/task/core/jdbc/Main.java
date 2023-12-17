@@ -8,6 +8,7 @@ import jm.task.core.jdbc.util.Util;
 
 public class Main {
     public static void main(String[] args) {
+
         UserService userService = new UserServiceImpl();
 
         userService.createUsersTable();
@@ -22,6 +23,7 @@ public class Main {
         userService.cleanUsersTable();
         userService.dropUsersTable();
 
-        Util.closeConnection();
+        Util.closeSessionFactory();
+
     }
 }
